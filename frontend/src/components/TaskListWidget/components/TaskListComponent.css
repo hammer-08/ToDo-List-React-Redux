@@ -1,0 +1,23 @@
+.task-list {
+    left: 50%;
+}
+
+.task-list .list {
+    display: inline;
+}
+
+.btn {
+    margin: auto;
+}
+
+.add-new-task {
+    background-color: aqua;
+}
+
+.row {
+
+}
+
+.row .edit-row {
+    display: inline;
+}
