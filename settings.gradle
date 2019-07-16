@@ -1,0 +1,10 @@
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'todolistmodule'
+
+// backend
+include "backend"
+include "frontend"
