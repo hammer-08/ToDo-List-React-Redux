@@ -1,6 +1,6 @@
 import { Act } from '../../types';
 import { TaskModel } from '../../ApiModels';
-import { apiFetch } from '../../ApiFetch';
+import { apiFetch, apiPost } from '../../ApiFetch';
 
 export interface TaskListState {
     taskList: TaskModel[];
@@ -45,20 +45,22 @@ export function taskListReducer(
     }
 }
 
-export async function findAllTasks() {
+export async function findAllTasks(): Promise<string> {
     const response = await apiFetch('/findAllTasks');
     return await response.json();
 }
 
-export async function addTask(request: TaskModel) {
-    const response = await apiFetch('/addTask', request);
+export async function addTask(request: TaskModel): Promise<String> {
+    const response = await apiPost('/addTask', request);
     return await response.json();
 }
 
-export async function editTask() {
-
+export async function editTask(request: TaskModel): Promise<string> {
+    const response = await apiPost('/editTask', request);
+    return await response.json();
 }
 
-export async function deleteTask() {
-
+export async function deleteTask(taskId: string): Promise<string> {
+    const response = await apiPost('/deleteTask', taskId);
+    return await response.json();
 }

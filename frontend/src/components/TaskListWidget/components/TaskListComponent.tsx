@@ -7,8 +7,8 @@ import { TaskModel } from '../../../ApiModels';
 import './TaskListComponent.css';
 
 interface OwnProps {
-    handlerSubmitEditClick(index: number, desc: string): void;
-    handlerDoneClick(index: number): void;
+    handlerSubmitEditClick(id: string, desc: string): void;
+    handlerDoneClick(id: string): void;
     handlerSubmitCreationClick(value: string): void;
 }
 
@@ -73,7 +73,7 @@ class TaskListComponent extends React.Component<Props, State> {
                                         key={index}
                                         desc={e.desc}
                                         isDone={e.isDone}
-                                        index={index}
+                                        id={e.id}
                                         handlerSubmitEditClick={this.props.handlerSubmitEditClick}
                                         handlerDoneClick={this.props.handlerDoneClick}
                                     />

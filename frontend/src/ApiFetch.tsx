@@ -1,4 +1,16 @@
 import * as _ from 'lodash';
+import { ErrorDto } from './ApiModels';
+import { Store, Action } from 'redux';
+import * as Notifications from 'react-notification-system-redux';
+import { StateType } from './types';
+import { anyWindow } from './globals';
+
+export function apiPost(input: RequestInfo, data: {}) {
+    return apiFetch(input, {
+        method: 'POST',
+        body: JSON.stringify(data)
+    });
+}
 
 export function apiFetch(input: RequestInfo, init?: RequestInit | undefined): Promise<Response> {
     const defaultHeaders: _.Dictionary<string> = {
@@ -48,7 +60,7 @@ export function apiFetch(input: RequestInfo, init?: RequestInit | undefined): Pr
                 statusCode: response.status
             });
         })
-        /*.catch((error: ErrorDto) => {
+        .catch((error: ErrorDto) => {
             if (error.statusCode === 401) {
                 window.location.replace('#/logout');
             } else if (error.statusCode === 403) {
@@ -62,5 +74,15 @@ export function apiFetch(input: RequestInfo, init?: RequestInit | undefined): Pr
             }
 
             return Promise.reject<Response>(error);
-        })*/;
+        });
+
+    function createErrorNotification(message: string): Action {
+        return Notifications.error({
+            title: 'An error occurred on the server',
+            message: message,
+            position: 'tr',
+            autoDismiss: 0
+        });
+    }
+
 }

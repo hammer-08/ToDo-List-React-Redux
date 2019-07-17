@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * This class exposes the REST API for the system.
- *
  */
 @RestController
 @RequestMapping("/addTask")
@@ -30,19 +29,31 @@ public class TaskController {
   /**
    * This method will be used to add tasks to the system.
    *
+   * @param
+   * @return an instance of {@link ResponseDTO} which will notify whether
+   * adding the task was successful.
+   */
+
+  @RequestMapping("/findAllTasks")
+  public String findAllTasks() {
+    System.out.println("Hello");
+    return "";
+  }
+
+  /**
+   * This method will be used to add tasks to the system.
+   *
    * @param taskDTO the task to add.
    * @return an instance of {@link ResponseDTO} which will notify whether
    * adding the task was successful.
    */
-  @ResponseBody
-  @ResponseStatus(value = HttpStatus.CREATED)
   @RequestMapping(method = RequestMethod.POST, produces = {
       MediaType.APPLICATION_JSON_VALUE}, consumes = {MediaType.APPLICATION_JSON_VALUE})
-  public ResponseDTO addTask(@Valid @RequestBody TaskDTO taskDTO) {
+  public ResponseDTO createTask(@Valid @RequestBody TaskDTO taskDTO) {
     ResponseDTO responseDTO = new ResponseDTO(ResponseDTO.Status.SUCCESS,
-        MessageConstants.MEMBER_ADDED_SUCCESSFULLY);
+        MessageConstants.TASK_ADDED_SUCCESSFULLY);
     try {
-      taskService.addTask(taskDTO);
+      taskService.createTask(taskDTO);
     } catch (Exception e) {
       responseDTO.setStatus(ResponseDTO.Status.FAIL);
       responseDTO.setMessage(e.getMessage());

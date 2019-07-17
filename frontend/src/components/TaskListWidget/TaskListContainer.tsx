@@ -9,7 +9,10 @@ import {
     //submitCreation,
     submitEdition,
     makeDone,
-    addTask
+    addTask,
+    editTask,
+    deleteTask,
+    findAllTasks
 } from './TaskListLogic';
 import uuid from 'uuid';
 import * as moment from 'moment';
@@ -43,16 +46,40 @@ class TaskListContainer extends React.Component<Props> {
         addTask(task);
     }
 
-    handleSubmitEdit = (index: number, text: string) => {
-        const taskListEdited = [...this.props.taskList];
+    handleSubmitEdition = (id: string, text: string) => {
+        const oldTask = this.props.taskList.find(e => e.id === id);
+
+        if (!oldTask) {
+            return;
+        }
+
+        const newTask: TaskModel = {
+            ...oldTask,
+            desc: text
+        }
+        editTask(newTask);
+
+        /*const taskListEdited = [...this.props.taskList];
         taskListEdited[index].desc = text;
-        this.props.submitEdition(taskListEdited);
+        this.props.submitEdition(taskListEdited);*/
     }
 
-    handleDone = (index: number) => {
-        const taskListEdited = [...this.props.taskList];
+    handleDone = (id: string) => {
+        const oldTask = this.props.taskList.find(e => e.id === id);
+
+        if (!oldTask) {
+            return;
+        }
+
+        const newTask: TaskModel = {
+            ...oldTask,
+            isDone: true
+        }
+        editTask(newTask);
+
+        /*const taskListEdited = [...this.props.taskList];
         taskListEdited[index].isDone = true
-        this.props.makeDone(taskListEdited);
+        this.props.makeDone(taskListEdited);*/
     }
 
     render() {
@@ -60,7 +87,7 @@ class TaskListContainer extends React.Component<Props> {
             <div className={'task-list-component'}>
                 <TaskListComponent
                     handlerSubmitCreationClick={this.handleSubmitCreation}
-                    handlerSubmitEditClick={this.handleSubmitEdit}
+                    handlerSubmitEditClick={this.handleSubmitEdition}
                     handlerDoneClick={this.handleDone}
                 />
             </div>

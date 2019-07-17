@@ -5,9 +5,9 @@ interface OwnProps {
     key: number;
     desc: string;
     isDone: boolean;
-    index: number;
-    handlerSubmitEditClick(index: number, desc: string): void;
-    handlerDoneClick(index: number): void;
+    id: string;
+    handlerSubmitEditClick(id: string, desc: string): void;
+    handlerDoneClick(id: string): void;
 }
 
 interface State {
@@ -30,9 +30,9 @@ export default class TaskListRow extends React.Component<Props, State> {
         this.setState({ desc: e })
     }
 
-    handlerSubmitEditClick = (i: number, text: string) => {
+    handlerSubmitEditClick = (id: string, text: string) => {
         this.setState({ editTask: false });
-        this.props.handlerSubmitEditClick(i, text);
+        this.props.handlerSubmitEditClick(id, text);
     }
 
     handlerCancelEditClick = () => {
@@ -49,7 +49,7 @@ export default class TaskListRow extends React.Component<Props, State> {
                             onChange={(e) => this.handlerDescChange(e.target.value)}
                         />
                         <button
-                            onClick={() => this.handlerSubmitEditClick(this.props.index, this.state.desc)}
+                            onClick={() => this.handlerSubmitEditClick(this.props.id, this.state.desc)}
                         >
                             Submit
                     </button>
@@ -69,7 +69,7 @@ export default class TaskListRow extends React.Component<Props, State> {
                                     Edit
                     </button>
                                 <button
-                                    onClick={() => this.props.handlerDoneClick(this.props.index)}
+                                    onClick={() => this.props.handlerDoneClick(this.props.id)}
                                 >
                                     Done
                     </button>

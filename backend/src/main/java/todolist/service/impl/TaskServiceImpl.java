@@ -26,7 +26,7 @@ public class TaskServiceImpl implements TaskService {
   }
 
   @Transactional
-  public void saveTask(TaskDTO taskDTO) {
+  public void createTask(TaskDTO taskDTO) {
     TaskDetail dbTask = taskRepository.findTaskById(taskDTO.getId());
 
     if (dbTask != null) {

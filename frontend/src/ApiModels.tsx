@@ -5,3 +5,9 @@ export interface TaskModel {
     desc: string;
     isDone: boolean;
 }
+
+export interface ErrorDto {
+    message: string;
+    exceptionName: string;
+    statusCode: number;
+  }
