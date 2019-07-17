@@ -1,4 +1,4 @@
-package main.java.todolist.exception;
+package todolist.exception;
 
 /**
  * There will be an exception

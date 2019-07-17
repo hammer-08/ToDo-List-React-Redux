@@ -1,11 +1,12 @@
-package main.java.todolist.service.impl;
+package todolist.service.impl;
 
-import main.java.todolist.dao.TaskRepository;
-import main.java.todolist.domain.TaskDetail;
-import main.java.todolist.exception.TaskException;
-import main.java.todolist.service.TaskService;
-import main.java.todolist.web.dto.TaskDTO;
-import main.java.todolist.web.transformer.DTOToDomainTransformer;
+import org.springframework.transaction.annotation.Transactional;
+import todolist.dao.TaskRepository;
+import todolist.domain.TaskDetail;
+import todolist.exception.TaskException;
+import todolist.service.TaskService;
+import todolist.web.dto.TaskDTO;
+import todolist.web.transformer.DTOToDomainTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,10 +20,16 @@ public class TaskServiceImpl implements TaskService {
   @Autowired
   private TaskRepository taskRepository;
 
-  public void addTask(TaskDTO taskDTO) {
-    TaskDetail dbMember = taskRepository.findById(taskDTO.getId());
+  @Transactional
+  public TaskDTO[] findAllTasks() {
+    return null;
+  }
 
-    if (dbMember != null) {
+  @Transactional
+  public void saveTask(TaskDTO taskDTO) {
+    TaskDetail dbTask = taskRepository.findTaskById(taskDTO.getId());
+
+    if (dbTask != null) {
       throw new TaskException();
     }
     TaskDetail taskToPersist = DTOToDomainTransformer.transform(taskDTO);

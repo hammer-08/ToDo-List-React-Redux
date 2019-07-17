@@ -1,4 +1,4 @@
-package main.java.todolist.web.dto;
+package todolist.web.dto;
 
 import javax.validation.constraints.NotNull;
 

@@ -3,7 +3,7 @@ import TaskListRow from './TaskListRow';
 import TaskListNewRow from './TaskListNewRow';
 import { StateType } from '../../../types';
 import { connect } from 'react-redux';
-import { Task } from '../../../ApiModels';
+import { TaskModel } from '../../../ApiModels';
 import './TaskListComponent.css';
 
 interface OwnProps {
@@ -17,7 +17,7 @@ interface State {
 }
 
 interface StateToProps {
-    taskList: Task[];
+    taskList: TaskModel[];
 }
 
 type Props = OwnProps & StateToProps;

@@ -1,7 +1,7 @@
-package main.java.todolist.web.transformer;
+package todolist.web.transformer;
 
-import main.java.todolist.domain.TaskDetail;
-import main.java.todolist.web.dto.TaskDTO;
+import todolist.domain.TaskDetail;
+import todolist.web.dto.TaskDTO;
 
 /**
  * This class will have transformers from and to different types we need. A

@@ -1,10 +1,10 @@
-package main.java.todolist.web.dto;
+package todolist.web.dto;
 
-    import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 
-    import com.fasterxml.jackson.annotation.JsonInclude;
-    import com.fasterxml.jackson.annotation.JsonInclude.Include;
-    import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * This class represents the output given out to the calling party as a json

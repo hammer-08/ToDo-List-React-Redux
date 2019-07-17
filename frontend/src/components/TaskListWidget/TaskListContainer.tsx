@@ -3,25 +3,25 @@ import { connect } from 'react-redux';
 import TaskListComponent from './components/TaskListComponent';
 import { StateType } from '../../types';
 import { Dispatch } from 'redux';
-import { Task } from '../../ApiModels';
+import { TaskModel } from '../../ApiModels';
 import {
     TaskListActions,
-    submitCreation,
+    //submitCreation,
     submitEdition,
-    makeDone
+    makeDone,
+    addTask
 } from './TaskListLogic';
-
-interface State {
-}
+import uuid from 'uuid';
+import * as moment from 'moment';
 
 interface StateToProps {
-    taskList: Task[];
+    taskList: TaskModel[];
 }
 
 interface DispatchProps {
-    submitCreation(value: Task): void;
-    submitEdition(value: Task[]): void;
-    makeDone(value: Task[]): void;
+    //submitCreation(value: string): void;
+    submitEdition(value: TaskModel[]): void;
+    makeDone(value: TaskModel[]): void;
 }
 
 type Props = StateToProps & DispatchProps;
@@ -32,7 +32,15 @@ class TaskListContainer extends React.Component<Props> {
     }
 
     handleSubmitCreation = (text: string) => {
-        this.props.submitCreation({ desc: text, isDone: false });
+        //this.props.submitCreation(text);
+        const task: TaskModel = {
+            id: uuid(),
+            isDone: false,
+            creationDateAndTime: '',
+            creationTimestamp: '',
+            desc: text
+        }
+        addTask(task);
     }
 
     handleSubmitEdit = (index: number, text: string) => {
@@ -68,9 +76,9 @@ function mapStateToProps(state: StateType) {
 
 function mapDispatchToProps(dispatch: Dispatch<TaskListActions>): DispatchProps {
     return {
-        submitCreation: (value: Task) => dispatch(submitCreation(value)),
-        submitEdition: (value: Task[]) => dispatch(submitEdition(value)),
-        makeDone: (value: Task[]) => dispatch(makeDone(value))
+        //submitCreation: (value: string) => dispatch(submitCreation(value)),
+        submitEdition: (value: TaskModel[]) => dispatch(submitEdition(value)),
+        makeDone: (value: TaskModel[]) => dispatch(makeDone(value))
     }
 }
 

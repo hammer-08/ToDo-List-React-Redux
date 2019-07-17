@@ -1,28 +1,29 @@
 import { Act } from '../../types';
-import { Task } from '../../ApiModels';
+import { TaskModel } from '../../ApiModels';
+import { apiFetch } from '../../ApiFetch';
 
 export interface TaskListState {
-    taskList: Task[];
+    taskList: TaskModel[];
 }
 
 export const taskListState: TaskListState = {
     taskList: []
 };
 
-export function submitCreation(value: Task): TaskListActions {
+/*export function submitCreation(value: string): TaskListActions {
     return { type: 'TASK_LIST/SUBMIT_CREATION', value: { value } };
-}
+}*/
 
-export function submitEdition(value: Task[]): TaskListActions {
+export function submitEdition(value: TaskModel[]): TaskListActions {
     return { type: 'TASK_LIST/SUBMIT_EDITION', value: { value } };
 }
 
-export function makeDone(value: Task[]): TaskListActions {
+export function makeDone(value: TaskModel[]): TaskListActions {
     return { type: 'TASK_LIST/MAKE_DONE', value: { value } };
 }
 
-export type TaskListActions = Act<'TASK_LIST/SUBMIT_CREATION', { value: Task }> |
-    Act<'TASK_LIST/MAKE_DONE', { value: Task[] }> | Act<'TASK_LIST/SUBMIT_EDITION', { value: Task[] }>;
+export type TaskListActions = Act<'TASK_LIST/SUBMIT_CREATION', { value: TaskModel }> |
+    Act<'TASK_LIST/MAKE_DONE', { value: TaskModel[] }> | Act<'TASK_LIST/SUBMIT_EDITION', { value: TaskModel[] }>;
 
 export function taskListReducer(
     state: TaskListState = taskListState,
@@ -42,4 +43,22 @@ export function taskListReducer(
         }
         default: return state;
     }
+}
+
+export async function findAllTasks() {
+    const response = await apiFetch('/findAllTasks');
+    return await response.json();
+}
+
+export async function addTask(request: TaskModel) {
+    const response = await apiFetch('/addTask', request);
+    return await response.json();
+}
+
+export async function editTask() {
+
+}
+
+export async function deleteTask() {
+
 }

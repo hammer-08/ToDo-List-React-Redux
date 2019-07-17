@@ -1,16 +1,21 @@
-package main.java.todolist.service;
+package todolist.service;
 
-import main.java.todolist.web.dto.TaskDTO;
+import todolist.web.dto.TaskDTO;
 
 /**
  * This interface defines the functionality exposed on the todolist.
  */
 public interface TaskService {
   /**
+   * This method will get all tasks existing in the repository
+   * @return returns array of {@link TaskDTO} instances with tasks' details
+   */
+  TaskDTO[] findAllTasks();
+  /**
    * This method will add a new task to the todolist.
    *
-   * @param task an instance of {@link TaskDTO} with the member
+   * @param task an instance of {@link TaskDTO} with the task
    *             details.
    */
-  void addTask(final TaskDTO task);
+  void saveTask(final TaskDTO task);
 }
