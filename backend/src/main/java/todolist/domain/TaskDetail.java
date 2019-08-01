@@ -1,6 +1,6 @@
 package todolist.domain;
 
-import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
@@ -9,9 +9,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "tasks")
 public class TaskDetail {
 
-  @Indexed
-  private String value;
+  @Id
   private String id;
+
+  private String value;
   private Boolean isDone;
 
   public TaskDetail(String id, String value, Boolean isDone) {
@@ -42,5 +43,12 @@ public class TaskDetail {
 
   public void setIsDone(Boolean isDone) {
     this.isDone = isDone;
+  }
+
+  public String toString() {
+    return String.format(
+        "Customer[id=%s, value='%s', isDone='%s']",
+        id, value, isDone
+    );
   }
 }

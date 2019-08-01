@@ -27,12 +27,12 @@ public class TaskServiceImpl implements TaskService {
 
   @Transactional
   public void createTask(TaskDTO taskDTO) {
-    TaskDetail dbTask = taskRepository.findTaskById(taskDTO.getId());
+    //TaskDetail dbTask = taskRepository.findTaskById(taskDTO.getId());
 
-    if (dbTask != null) {
+    /*if (dbTask != null) {
       throw new TaskException();
     }
     TaskDetail taskToPersist = DTOToDomainTransformer.transform(taskDTO);
-    taskRepository.insert(taskToPersist);
+    taskRepository.insert(taskToPersist);*/
   }
 }
