@@ -10,7 +10,8 @@ import {
     submitEdition,
     makeDone,
     addTask,
-    editTask
+    editTask,
+    findAllTasks2
 } from './TaskListLogic';
 import uuid from 'uuid';
 
@@ -27,7 +28,6 @@ interface DispatchProps {
 type Props = StateToProps & DispatchProps;
 
 class TaskListContainer extends React.Component<Props> {
-
     handleSubmitCreation = (text: string) => {
         //this.props.submitCreation(text);
         const task: TaskModel = {
@@ -76,6 +76,11 @@ class TaskListContainer extends React.Component<Props> {
         this.props.makeDone(taskListEdited);*/
     }
 
+    async butt() {
+        let a = await findAllTasks2()
+        alert(a);
+    }
+
     render() {
         return (
             <div className={'task-list-component'}>
@@ -84,6 +89,7 @@ class TaskListContainer extends React.Component<Props> {
                     handlerSubmitEditClick={this.handleSubmitEdition}
                     handlerDoneClick={this.handleDone}
                 />
+                <button onClick={this.butt}>434</button>
             </div>
         );
     }

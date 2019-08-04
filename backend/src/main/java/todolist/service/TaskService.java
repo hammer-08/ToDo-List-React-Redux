@@ -2,6 +2,8 @@ package todolist.service;
 
 import todolist.web.dto.TaskDTO;
 
+import java.util.List;
+
 /**
  * This interface defines the functionality exposed on the todolist.
  */
@@ -11,7 +13,7 @@ public interface TaskService {
    *
    * @return returns array of {@link TaskDTO} instances with tasks' details
    */
-  //TaskDTO[] findAllTasks();
+  List<TaskDTO> findAllTasks();
 
   /**
    * This method will add a new task to the todolist.

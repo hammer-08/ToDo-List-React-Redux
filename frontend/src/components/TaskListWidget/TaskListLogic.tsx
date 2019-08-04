@@ -64,3 +64,12 @@ export async function deleteTask(taskId: string): Promise<string> {
     const response = await apiPost('/deleteTask', taskId);
     return await response.json();
 }
+
+export function findAllTasks2(): Promise<String[]> {
+    return apiFetch('/api/rest')
+      .then(response => response.json())
+      .then(data => {
+        let tasks = (data as TaskModel[]);
+        return tasks.map(task => task.id);
+      });
+}

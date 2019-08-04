@@ -1,43 +1,45 @@
 package todolist.web.rest.controller;
 
-/*import javax.validation.Valid;
-
-import todolist.constants.MessageConstants;
-import todolist.service.TaskService;
-import todolist.web.dto.TaskDTO;
-import todolist.web.dto.ResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.data.rest.webmvc.RepositoryRestController;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;*/
+import org.springframework.web.bind.annotation.ResponseBody;
+import todolist.service.TaskService;
+import todolist.web.dto.TaskDTO;
+
+import java.util.List;
 
 /**
  * This class exposes the REST API for the system.
  */
-//@RestController
-//@RequestMapping("/addTask")
+@RepositoryRestController
+@Controller
 public class TaskController {
 
-  /*@Autowired
-  private TaskService taskService;
+  private final TaskService taskService;
 
-  *//**
+  @Autowired
+  public TaskController(TaskService taskService) {
+    this.taskService = taskService;
+  }
+
+  /**
    * This method will be used to add tasks to the system.
    *
    * @param
-   * @return an instance of {@link ResponseDTO} which will notify whether
+   * @return a List of {@link TaskDTO} which will notify whether
    * adding the task was successful.
-   *//*
+   */
 
-  @RequestMapping("/findAllTasks")
-  public String findAllTasks() {
-    System.out.println("Hello");
-    return "";
+  @RequestMapping(value = "/api/rest", method = RequestMethod.GET)
+  @ResponseBody
+  public List<TaskDTO> findAllTasks() {
+    return taskService.findAllTasks();
   }
 
-  *//**
+  /**
    * This method will be used to add tasks to the system.
    *
    * @param taskDTO the task to add.

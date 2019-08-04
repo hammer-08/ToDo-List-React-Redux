@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="todolistmodule.main" target="1.8" />
-      <module name="todolistmodule.test" target="1.8" />
+      <module name="ToDoListModule.main" target="1.8" />
+      <module name="ToDoListModule.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
