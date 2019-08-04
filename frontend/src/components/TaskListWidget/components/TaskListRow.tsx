@@ -4,7 +4,7 @@ import './TaskListComponent.css';
 interface OwnProps {
     key: number;
     desc: string;
-    isDone: boolean;
+    done: boolean;
     id: string;
     handlerSubmitEditClick(id: string, desc: string): void;
     handlerDoneClick(id: string): void;
@@ -61,8 +61,8 @@ export default class TaskListRow extends React.Component<Props, State> {
                     </div>
                     : <div>
                         <span>{this.props.desc}</span>
-                        {this.props.isDone && <span> - OK </span>}
-                        {!this.props.isDone &&
+                        {this.props.done && <span> - OK </span>}
+                        {!this.props.done &&
                             <span>
                                 <button
                                     onClick={() => this.setState({ editTask: true, desc: this.props.desc })}>

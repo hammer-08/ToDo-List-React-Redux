@@ -23,14 +23,14 @@ public class TaskDTO {
   @JsonProperty("value")
   private String value;
 
-  @JsonProperty("isDone")
-  private Boolean isDone;
+  @JsonProperty("done")
+  private Boolean done;
 
   public TaskDTO(@JsonProperty("id") String id, @JsonProperty("value") String value,
-                 @JsonProperty("isDone") Boolean isDone) {
+                 @JsonProperty("done") Boolean done) {
     this.id = id;
     this.value = value;
-    this.isDone = isDone;
+    this.done = done;
   }
 
   public String getId() {
@@ -49,11 +49,11 @@ public class TaskDTO {
     this.value = value;
   }
 
-  public Boolean getIsDone() {
-    return isDone;
+  public Boolean getdone() {
+    return done;
   }
 
-  public void setIsDone(Boolean isDone) {
-    this.isDone = isDone;
+  public void setdone(Boolean done) {
+    this.done = done;
   }*/
 }

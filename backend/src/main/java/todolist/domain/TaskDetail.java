@@ -6,19 +6,19 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * This class holds the details that will be stored about tasks on MongoDB.
  */
-@Document(collection = "tasks")
+@Document(collection = "TaskDetail")
 public class TaskDetail {
 
   @Id
   private String id;
 
   private String value;
-  private Boolean isDone;
+  private Boolean done;
 
-  public TaskDetail(String id, String value, Boolean isDone) {
+  public TaskDetail(String id, String value, Boolean done) {
     this.id = id;
     this.value = value;
-    this.isDone = isDone;
+    this.done = done;
   }
 
   public String getId() {
@@ -37,18 +37,18 @@ public class TaskDetail {
     this.value = value;
   }
 
-  public Boolean getIsDone() {
-    return isDone;
+  public Boolean isDone() {
+    return done;
   }
 
-  public void setIsDone(Boolean isDone) {
-    this.isDone = isDone;
+  public void setDone(Boolean done) {
+    this.done = done;
   }
 
   public String toString() {
     return String.format(
-        "Customer[id=%s, value='%s', isDone='%s']",
-        id, value, isDone
+        "Customer[id=%s, value='%s', done='%s']",
+        id, value, done
     );
   }
 }

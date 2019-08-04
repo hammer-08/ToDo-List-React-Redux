@@ -11,7 +11,7 @@ public interface TaskService {
    *
    * @return returns array of {@link TaskDTO} instances with tasks' details
    */
-  TaskDTO[] findAllTasks();
+  //TaskDTO[] findAllTasks();
 
   /**
    * This method will add a new task to the todolist.
@@ -19,5 +19,5 @@ public interface TaskService {
    * @param task an instance of {@link TaskDTO} with the task
    *             details.
    */
-  void createTask(final TaskDTO task);
+  //void createTask(final TaskDTO task);
 }

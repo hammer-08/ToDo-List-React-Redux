@@ -10,6 +10,8 @@ import todolist.web.transformer.DTOToDomainTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 /**
  * This service class implements the {@link TaskService} to
  * provide the functionality required for the todolist.
@@ -19,20 +21,4 @@ public class TaskServiceImpl implements TaskService {
 
   @Autowired
   private TaskRepository taskRepository;
-
-  @Transactional
-  public TaskDTO[] findAllTasks() {
-    return null;
-  }
-
-  @Transactional
-  public void createTask(TaskDTO taskDTO) {
-    //TaskDetail dbTask = taskRepository.findTaskById(taskDTO.getId());
-
-    /*if (dbTask != null) {
-      throw new TaskException();
-    }
-    TaskDetail taskToPersist = DTOToDomainTransformer.transform(taskDTO);
-    taskRepository.insert(taskToPersist);*/
-  }
 }

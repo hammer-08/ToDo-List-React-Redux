@@ -20,6 +20,6 @@ public class DTOToDomainTransformer {
    *         of the task.
    */
   /*public static TaskDetail transform(final TaskDTO taskDTO) {
-    return new TaskDetail(taskDTO.getId(), taskDTO.getValue(), taskDTO.getIsDone());
+    return new TaskDetail(taskDTO.getId(), taskDTO.getValue(), taskDTO.getdone());
   }*/
 }

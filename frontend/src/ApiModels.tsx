@@ -3,7 +3,7 @@ export interface TaskModel {
     creationDateAndTime: string;
     creationTimestamp: string;
     desc: string;
-    isDone: boolean;
+    done: boolean;
 }
 
 export interface ErrorDto {

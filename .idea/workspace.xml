@@ -2,57 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e15b7a3-fe3d-44a9-9ed0-dbe94fccccc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/dao/MongoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_classmate_1_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_flapdoodle_embed_de_flapdoodle_embed_mongo_2_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_flapdoodle_embed_de_flapdoodle_embed_process_2_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_dev_jna_jna_4_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_dev_jna_jna_platform_4_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_compress_1_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_core_9_0_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_el_9_0_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_validator_hibernate_validator_6_0_17_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_json_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_tomcat_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_web_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_web_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_webmvc_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/todolistmodule.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/todolistmodule.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/todolistmodule.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/todolistmodule.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/dao/MongoDB.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/dao/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/dao/TaskRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/domain/TaskDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/domain/TaskDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/service/impl/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/service/impl/TaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/ResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/ResponseDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/TaskDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/web/rest/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/web/rest/controller/TaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/todolist/web/transformer/DTOToDomainTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/todolist/web/transformer/DTOToDomainTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/todolist/dao/TaskRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/005cf43c50edfab10b6c3a9543df3bba.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/005cf43c50edfab10b6c3a9543df3bba.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/01c41c51e5041bc4b54983dfe49b1d1a.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/01c41c51e5041bc4b54983dfe49b1d1a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/2081be41be016a847fe8633541a89c99.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/2081be41be016a847fe8633541a89c99.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/27a034ff75e33c282f6a50e4cb8c62e0.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/27a034ff75e33c282f6a50e4cb8c62e0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/408fa62d54502fc3ce5121a8d05f78ff.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/408fa62d54502fc3ce5121a8d05f78ff.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/563a50f93517dc0531c4e5c13ac5e268.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/563a50f93517dc0531c4e5c13ac5e268.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/5754181c16b5fffd65a4d5cc600cc670.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/5754181c16b5fffd65a4d5cc600cc670.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/6a3a243ff606284377f145a92f0ca92d.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/6a3a243ff606284377f145a92f0ca92d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/732ec91bb72c259bd66394914cd10861.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/732ec91bb72c259bd66394914cd10861.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/7a9a7434ee8a293600a42d113c83a261.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/7a9a7434ee8a293600a42d113c83a261.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/7e71f3846e9e7e4e75ac5ae559fcae32.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/7e71f3846e9e7e4e75ac5ae559fcae32.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/88b14821ae28e5394270e37bd4d2c698.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/88b14821ae28e5394270e37bd4d2c698.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/997fe59e4318d955ee233e78824ad349.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/997fe59e4318d955ee233e78824ad349.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/bad099138d520cafb18c9941c78dcbef.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/bad099138d520cafb18c9941c78dcbef.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/c12b4f6ae766447b720c25383cc9654d.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/c12b4f6ae766447b720c25383cc9654d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/c6dfdae9cc655d443396b260e04dbd25.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/c6dfdae9cc655d443396b260e04dbd25.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/de9e673c30edfee5ddabde15d44e56af.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/de9e673c30edfee5ddabde15d44e56af.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/e17c8673a1adbb0999673aa85c3e76ad.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/e17c8673a1adbb0999673aa85c3e76ad.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/e22455520c89418f13c6adc411e4efd6.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/e22455520c89418f13c6adc411e4efd6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/ea3773571a47725ba917bde322fee60c.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/ea3773571a47725ba917bde322fee60c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/loader-runner/lib/LoaderRunner.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/loader-runner/lib/LoaderRunner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ApiModels.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ApiModels.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TaskListWidget/TaskListContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TaskListWidget/TaskListContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TaskListWidget/components/TaskListComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TaskListWidget/components/TaskListComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TaskListWidget/components/TaskListRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TaskListWidget/components/TaskListRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/todolist/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/todolist/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/todolist/domain/TaskDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/todolist/domain/TaskDetail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/todolist/service/impl/TaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/todolist/service/impl/TaskServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/todolist/web/dto/ResponseDTO$Status.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/todolist/web/dto/ResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/todolist/web/dto/ResponseDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/todolist/web/dto/TaskDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/todolist/web/dto/TaskDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/todolist/web/rest/controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/todolist/web/rest/controller/TaskController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/todolist/web/transformer/DTOToDomainTransformer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/todolist/web/transformer/DTOToDomainTransformer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -111,11 +96,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/domain/TaskDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+            <state relative-caret-position="408">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="170">
+              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#231#232#0" expanded="true" />
@@ -140,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/web/rest/controller/TaskController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="209">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
@@ -159,22 +144,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/dao/MongoDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/dao/TaskRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,8 +158,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/service/TaskService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -194,8 +167,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/service/impl/TaskServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+            <state relative-caret-position="374">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -215,8 +188,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/TaskDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state relative-caret-position="243">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -236,7 +209,12 @@
       <find>@Repository</find>
       <find>@endpoint</find>
       <find>127.0.0.1</find>
+      <find>isDone</find>
+      <find>@Configuration</find>
     </findStrings>
+    <replaceStrings>
+      <replace>done</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -260,27 +238,26 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/ru.todolist/web/dto/ResponseDTO.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/.idea/gradle.xml" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/Application.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/todolist/exception/TaskException.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/todolist/constants/MessageConstants.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/service/TaskService.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/ResponseDTO.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/TaskDTO.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/todolist/web/rest/controller/TaskController.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/service/impl/TaskServiceImpl.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/todolist/web/transformer/DTOToDomainTransformer.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/domain/TaskDetail.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/dao/MongoDB.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/todolist/dao/TaskRepository.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/domain/TaskDetail.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/Application.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/dao/MongoDB.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/service/TaskService.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/todolist/service/impl/TaskServiceImpl.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="-8" />
-    <option name="width" value="1874" />
-    <option name="height" value="1096" />
+    <option name="x" value="55" />
+    <option name="width" value="1872" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -339,113 +316,12 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="transformer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="todolistmodule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoList" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -548,10 +424,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="0" />
-    <editor active="true" />
+    <frame x="55" y="0" width="1872" height="1087" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7270341" visible="true" weight="0.17144433" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7270341" visible="true" weight="0.17163356" />
       <window_info id="Structure" order="1" sideWeight="0.27296588" side_tool="true" weight="0.17144433" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -559,19 +434,19 @@
       <window_info id="Favorites" order="5" sideWeight="0.5013123" side_tool="true" weight="0.1631753" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20872274" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2085954" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49944875" weight="0.20145379" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32917964" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49944875" weight="0.20125785" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32914045" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" weight="0.32917964" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49944875" weight="0.32917964" />
-      <window_info anchor="bottom" id="CheckStyle" order="10" sideWeight="0.49944875" weight="0.15057114" />
+      <window_info anchor="bottom" id="CheckStyle" order="10" sideWeight="0.49944875" weight="0.14989518" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005513" side_tool="true" weight="0.14641744" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32917964" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3322851" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -581,7 +456,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="sbt" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Gradle" order="7" visible="true" weight="0.12072767" />
+      <window_info anchor="right" id="Gradle" order="7" visible="true" weight="0.12086093" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Database" order="10" />
@@ -673,24 +548,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/ResponseDTO.java">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/dao/MongoDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/TaskDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state relative-caret-position="119">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/web/rest/controller/TaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="209">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -704,59 +587,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/domain/TaskDetail.java">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/service/TaskService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/dao/MongoDB.java">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/dao/TaskRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/service/impl/TaskServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        <state relative-caret-position="374">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/service/TaskService.java">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/ResponseDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        <state relative-caret-position="102">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/dao/TaskRepository.java">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/web/dto/TaskDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="243">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/todolist/domain/TaskDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -72,7 +72,7 @@ class TaskListComponent extends React.Component<Props, State> {
                                     <TaskListRow
                                         key={index}
                                         desc={e.desc}
-                                        isDone={e.isDone}
+                                        done={e.done}
                                         id={e.id}
                                         handlerSubmitEditClick={this.props.handlerSubmitEditClick}
                                         handlerDoneClick={this.props.handlerDoneClick}

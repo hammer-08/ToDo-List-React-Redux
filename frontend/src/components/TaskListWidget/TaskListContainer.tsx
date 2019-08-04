@@ -10,12 +10,9 @@ import {
     submitEdition,
     makeDone,
     addTask,
-    editTask,
-    deleteTask,
-    findAllTasks
+    editTask
 } from './TaskListLogic';
 import uuid from 'uuid';
-import * as moment from 'moment';
 
 interface StateToProps {
     taskList: TaskModel[];
@@ -30,15 +27,12 @@ interface DispatchProps {
 type Props = StateToProps & DispatchProps;
 
 class TaskListContainer extends React.Component<Props> {
-    constructor(props: Props) {
-        super(props);
-    }
 
     handleSubmitCreation = (text: string) => {
         //this.props.submitCreation(text);
         const task: TaskModel = {
             id: uuid(),
-            isDone: false,
+            done: false,
             creationDateAndTime: '',
             creationTimestamp: '',
             desc: text
@@ -73,12 +67,12 @@ class TaskListContainer extends React.Component<Props> {
 
         const newTask: TaskModel = {
             ...oldTask,
-            isDone: true
+            done: true
         }
         editTask(newTask);
 
         /*const taskListEdited = [...this.props.taskList];
-        taskListEdited[index].isDone = true
+        taskListEdited[index].done = true
         this.props.makeDone(taskListEdited);*/
     }
 
