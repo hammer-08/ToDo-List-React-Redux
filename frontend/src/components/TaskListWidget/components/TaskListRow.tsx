@@ -69,16 +69,18 @@ export default class TaskListRow extends React.Component<Props, State> {
                         <span className="button glyphicon glyphicon-remove" onClick={this.handleCancelEditClick}>
                             Cancel
                         </span>
+                        <hr className="hr hr-edit" />
                     </div>
                     : <div className={'show-row'}>
                         <span>{this.props.task.value}</span>
-                        {this.props.task.done && <span className="okaySign glyphicon glyphicon-ok" style={{marginLeft: '10px'}}/>}
+                        {this.props.task.done && <span className="okaySign glyphicon glyphicon-ok" style={{ marginLeft: '10px' }} />}
                         {!this.props.task.done &&
                             <span>
                                 <span className="button glyphicon glyphicon-pencil" onClick={this.handleEditClick} />
                                 <span className="button glyphicon glyphicon-ok-sign" onClick={this.handleDoneClick} />
                                 <span className="button glyphicon glyphicon-trash" onClick={this.handleDeleteClick} />
                             </span>}
+                        <hr className="hr"/>
                     </div>}
             </div>
         );

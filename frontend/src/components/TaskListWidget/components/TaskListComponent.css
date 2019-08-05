@@ -34,14 +34,26 @@
     padding-bottom: 9px;
 }
 
+.hr {
+    border: none;
+    background-color: lightgrey;
+    height: 1px;
+}
+
+.hr.hr-edit {
+    border: none;
+    background-color: red;
+    height: 2px;
+}
+
 .okaySign {
     color: green;
 }
 
-.row .edit-row {
-    display: inline;
+.edit-row {
+    margin: 10px 0 5px 0;
 }
 
-.row .show-row {
-    margin: 5px 0 5px 0;
+.show-row {
+    margin: 10px 0 5px 0;
 }
