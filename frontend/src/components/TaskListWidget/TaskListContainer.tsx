@@ -31,7 +31,7 @@ class TaskListContainer extends React.Component<Props> {
         this.props.setTasks(tasks);
     }
 
-    handleSubmitCreation = async(text: string) => {
+    handleSubmitCreation = async (text: string) => {
         const task: TaskModel = {
             taskId: uuid(),
             done: false,
@@ -43,7 +43,7 @@ class TaskListContainer extends React.Component<Props> {
         this.setTasks();
     }
 
-    handleSubmitEdition = async(task: TaskModel, text: string) => {
+    handleSubmitEdition = async (task: TaskModel, text: string) => {
         if (!task) {
             return;
         }
@@ -56,7 +56,7 @@ class TaskListContainer extends React.Component<Props> {
         this.setTasks();
     }
 
-    handleDone = async(task: TaskModel) => {
+    handleDone = async (task: TaskModel) => {
         if (!task) {
             return;
         }
@@ -73,8 +73,9 @@ class TaskListContainer extends React.Component<Props> {
         this.setTasks();
     }
 
-    handleDeleteTask = (taskId: string) => {
-        deleteTask(taskId);
+    handleDeleteTask = async (taskId: string) => {
+        await deleteTask(taskId);
+        this.setTasks();
     }
 
     render() {

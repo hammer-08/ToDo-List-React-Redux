@@ -29,4 +29,8 @@ public class TaskServiceImpl implements TaskService {
     TaskDetail taskDtoToPersist = DTOToDomainTransformer.transform(task);
     taskRepository.save(taskDtoToPersist);
   }
+
+  public void deleteTask(String taskId) {
+    taskRepository.deleteById(taskId);
+  }
 }

@@ -25,7 +25,9 @@ const store = createStore(
 
 ReactDOM.render(
     <Provider store={store}>
-        <TaskListContainer />
+        <div style={{ top: '10%', left: '45%', position: 'absolute' }}>
+            <TaskListContainer />
+        </div>
     </Provider>
     , document.getElementById('root'));
 

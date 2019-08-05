@@ -22,4 +22,10 @@ public interface TaskService {
    *             details.
    */
   void editTask(final TaskDTO task);
+
+  /**
+   * This method will be used to delete tasks;
+   * @param taskId - id of the task
+   */
+  void deleteTask(String taskId);
 }

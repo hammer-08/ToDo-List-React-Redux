@@ -31,7 +31,6 @@ public class TaskController {
   /**
    * This method will be used to add tasks to the system.
    *
-   * @param
    * @return a List of {@link TaskDTO} which will notify whether
    * adding the task was successful.
    */
@@ -59,6 +58,18 @@ public class TaskController {
       taskService.editTask(request);
 
       return ResponseEntity.ok(request.getTaskId());
+    };
+  }
+
+  /**
+   * This method will be used to delete tasks;
+   */
+  @PostMapping("api/deleteTask")
+  public Callable<ResponseEntity<String>> deleteTask(@RequestBody String taskId) {
+    return () -> {
+      taskService.deleteTask(taskId);
+
+      return ResponseEntity.ok(taskId);
     };
   }
 }
