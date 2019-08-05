@@ -6,38 +6,41 @@ import { Dispatch } from 'redux';
 import { TaskModel } from '../../ApiModels';
 import {
     TaskListActions,
-    //submitCreation,
-    submitEdition,
-    makeDone,
-    addTask,
+    setTasks,
     editTask,
-    findAllTasks2
+    findAllTasks
 } from './TaskListLogic';
 import uuid from 'uuid';
+import moment from 'moment';
 
 interface StateToProps {
     taskList: TaskModel[];
 }
 
 interface DispatchProps {
-    //submitCreation(value: string): void;
-    submitEdition(value: TaskModel[]): void;
-    makeDone(value: TaskModel[]): void;
+    setTasks(value: TaskModel[]): void;
 }
 
 type Props = StateToProps & DispatchProps;
 
 class TaskListContainer extends React.Component<Props> {
+
+    async setTasks () {
+        const tasks = await findAllTasks();
+        this.props.setTasks(tasks);
+    }
+
     handleSubmitCreation = (text: string) => {
-        //this.props.submitCreation(text);
         const task: TaskModel = {
             id: uuid(),
             done: false,
-            creationDateAndTime: '',
-            creationTimestamp: '',
-            desc: text
+            creationDateAndTime: moment().toString(),
+            creationTimestamp: moment().utc.toString(),
+            value: text
         }
-        addTask(task);
+        editTask(task);
+
+        setInterval(() => this.setTasks(), 1000);
     }
 
     handleSubmitEdition = (id: string, text: string) => {
@@ -49,13 +52,11 @@ class TaskListContainer extends React.Component<Props> {
 
         const newTask: TaskModel = {
             ...oldTask,
-            desc: text
+            value: text
         }
         editTask(newTask);
 
-        /*const taskListEdited = [...this.props.taskList];
-        taskListEdited[index].desc = text;
-        this.props.submitEdition(taskListEdited);*/
+        setInterval(() => this.setTasks(), 1000);
     }
 
     handleDone = (id: string) => {
@@ -65,20 +66,17 @@ class TaskListContainer extends React.Component<Props> {
             return;
         }
 
-        const newTask: TaskModel = {
+        const doneTask: TaskModel = {
             ...oldTask,
             done: true
         }
-        editTask(newTask);
+        editTask(doneTask);
 
-        /*const taskListEdited = [...this.props.taskList];
-        taskListEdited[index].done = true
-        this.props.makeDone(taskListEdited);*/
+        setInterval(() => this.setTasks(), 1000);
     }
 
-    async butt() {
-        let a = await findAllTasks2()
-        alert(a);
+    async componentWillMount() {
+        this.setTasks();
     }
 
     render() {
@@ -89,7 +87,6 @@ class TaskListContainer extends React.Component<Props> {
                     handlerSubmitEditClick={this.handleSubmitEdition}
                     handlerDoneClick={this.handleDone}
                 />
-                <button onClick={this.butt}>434</button>
             </div>
         );
     }
@@ -103,9 +100,7 @@ function mapStateToProps(state: StateType) {
 
 function mapDispatchToProps(dispatch: Dispatch<TaskListActions>): DispatchProps {
     return {
-        //submitCreation: (value: string) => dispatch(submitCreation(value)),
-        submitEdition: (value: TaskModel[]) => dispatch(submitEdition(value)),
-        makeDone: (value: TaskModel[]) => dispatch(makeDone(value))
+        setTasks: (value: TaskModel[]) => dispatch(setTasks(value))
     }
 }
 

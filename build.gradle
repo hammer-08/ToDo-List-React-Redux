@@ -1,6 +1,6 @@
 plugins {
-	id 'org.springframework.boot' version '2.1.6.RELEASE'
-	id 'java'
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
 }
 
 apply plugin: 'idea'
@@ -10,21 +10,24 @@ apply plugin: 'io.spring.dependency-management'
 group = 'ru.todolist'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+targetCompatibility = '1.8' 
 
 repositories {
-	mavenCentral()
+    mavenCentral()
+    jcenter()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
-	compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
-	compile 'org.springframework.boot:spring-boot-starter-data-rest:2.0.4.RELEASE'
-	testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    compile 'org.springframework.boot:spring-boot-starter-data-rest:2.0.4.RELEASE'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile 'org.apache.commons:commons-lang3:3.6'
 }
 
 sourceSets {
-	main.java.srcDirs = ['backend/src/main/java']
-	main.resources.srcDirs = ['backend/src/main/resources']
-	test.java.srcDirs = ['backend/src/test/java']
-	test.resources.srcDirs = ['backend/src/test/resources']
+    main.java.srcDirs = ['backend/src/main/java']
+    main.resources.srcDirs = ['backend/src/main/resources']
+    test.java.srcDirs = ['backend/src/test/java']
+    test.resources.srcDirs = ['backend/src/test/resources']
 }

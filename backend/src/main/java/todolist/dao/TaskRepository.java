@@ -13,9 +13,9 @@ public interface TaskRepository extends MongoRepository<TaskDetail, String> {
   /**
    * This method finds the task by its id and gives information about it
    *
-   * @param id - id of the task for searching.
+   * @param value - id of the task for searching.
    * @return returns instance {@link TaskDetail} with information about the task.
    */
-  //@Query(" 'id' : {$regex: ?0, $options: 'i' }}")
-  Optional<TaskDetail> findById(String id);
+  @Query
+  TaskDetail findByValue(final String value);
 }

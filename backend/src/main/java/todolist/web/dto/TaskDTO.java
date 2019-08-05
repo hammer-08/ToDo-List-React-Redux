@@ -15,6 +15,12 @@ public class TaskDTO {
   @JsonProperty("id")
   private String id;
 
+  @JsonProperty("creationDateAndTime")
+  private String creationDateAndTime;
+
+  @JsonProperty("creationTimestamp")
+  private String creationTimestamp;
+
   @NotNull
   @JsonProperty("value")
   private String value;
@@ -23,10 +29,14 @@ public class TaskDTO {
   private Boolean done;
 
   public TaskDTO(@JsonProperty("id") String id, @JsonProperty("value") String value,
-                 @JsonProperty("done") Boolean done) {
+                 @JsonProperty("done") Boolean done, @JsonProperty("creationDateAndTime")
+                     String creationDateAndTime, @JsonProperty("creationTimestamp")
+                     String creationTimestamp) {
     this.id = id;
     this.value = value;
     this.done = done;
+    this.creationDateAndTime = creationDateAndTime;
+    this.creationTimestamp = creationTimestamp;
   }
 
   public String getId() {
@@ -45,11 +55,27 @@ public class TaskDTO {
     this.value = value;
   }
 
-  public Boolean getdone() {
+  public Boolean isDone() {
     return done;
   }
 
-  public void setdone(Boolean done) {
+  public void setDone(Boolean done) {
     this.done = done;
+  }
+
+  public String getCreationDateAndTime() {
+    return creationDateAndTime;
+  }
+
+  public void setCreationDateAndTime(String creationDateAndTime) {
+    this.creationDateAndTime = creationDateAndTime;
+  }
+
+  public String getCreationTimestamp() {
+    return creationTimestamp;
+  }
+
+  public void setCreationTimestamp(String creationTimestamp) {
+    this.creationTimestamp = creationTimestamp;
   }
 }

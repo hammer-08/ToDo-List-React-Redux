@@ -10,34 +10,17 @@ export const taskListState: TaskListState = {
     taskList: []
 };
 
-/*export function submitCreation(value: string): TaskListActions {
-    return { type: 'TASK_LIST/SUBMIT_CREATION', value: { value } };
-}*/
-
-export function submitEdition(value: TaskModel[]): TaskListActions {
-    return { type: 'TASK_LIST/SUBMIT_EDITION', value: { value } };
+export function setTasks(value: TaskModel[]): TaskListActions {
+    return { type: 'TASK_LIST/SET_TASKS', value: { value } };
 }
 
-export function makeDone(value: TaskModel[]): TaskListActions {
-    return { type: 'TASK_LIST/MAKE_DONE', value: { value } };
-}
-
-export type TaskListActions = Act<'TASK_LIST/SUBMIT_CREATION', { value: TaskModel }> |
-    Act<'TASK_LIST/MAKE_DONE', { value: TaskModel[] }> | Act<'TASK_LIST/SUBMIT_EDITION', { value: TaskModel[] }>;
+export type TaskListActions = Act<'TASK_LIST/SET_TASKS', { value: TaskModel[] }>;
 
 export function taskListReducer(
     state: TaskListState = taskListState,
     action: TaskListActions): TaskListState {
     switch (action.type) {
-        case 'TASK_LIST/SUBMIT_CREATION': return {
-            ...state,
-            taskList: state.taskList.concat(action.value.value)
-        };
-        case 'TASK_LIST/MAKE_DONE': return {
-            ...state,
-            taskList: [...action.value.value]
-        };
-        case 'TASK_LIST/SUBMIT_EDITION': return {
+        case 'TASK_LIST/SET_TASKS': return {
             ...state,
             taskList: [...action.value.value]
         }
@@ -45,31 +28,19 @@ export function taskListReducer(
     }
 }
 
-export async function findAllTasks(): Promise<string> {
-    const response = await apiFetch('/findAllTasks');
-    return await response.json();
-}
-
-export async function addTask(request: TaskModel): Promise<String> {
-    const response = await apiPost('/addTask', request);
-    return await response.json();
+export async function findAllTasks(): Promise<TaskModel[]> {
+    const response = await apiFetch('api/findAllTasks');
+    const data = await response.json();
+    const tasks = data as TaskModel[];
+    return tasks;
 }
 
 export async function editTask(request: TaskModel): Promise<string> {
-    const response = await apiPost('/editTask', request);
+    const response = await apiPost('api/editTask', request);
     return await response.json();
 }
 
 export async function deleteTask(taskId: string): Promise<string> {
-    const response = await apiPost('/deleteTask', taskId);
+    const response = await apiPost('api/deleteTask', taskId);
     return await response.json();
-}
-
-export function findAllTasks2(): Promise<String[]> {
-    return apiFetch('/api/rest')
-      .then(response => response.json())
-      .then(data => {
-        let tasks = (data as TaskModel[]);
-        return tasks.map(task => task.id);
-      });
 }

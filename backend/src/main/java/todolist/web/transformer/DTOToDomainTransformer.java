@@ -13,13 +13,13 @@ public class DTOToDomainTransformer {
    * This method will trasform an instance of {@link TaskDTO}
    * to {@link TaskDetail}
    *
-   * @param taskDTO
-   *            an instance of {@link TaskDTO} with the details
-   *            of the task.
+   * @param taskDTO an instance of {@link TaskDTO} with the details
+   *                of the task.
    * @return an instance of {@link TaskDTO} with the details
-   *         of the task.
+   * of the task.
    */
-  /*public static TaskDetail transform(final TaskDTO taskDTO) {
-    return new TaskDetail(taskDTO.getId(), taskDTO.getValue(), taskDTO.getdone());
-  }*/
+  public static TaskDetail transform(final TaskDTO taskDTO) {
+    return new TaskDetail(taskDTO.getId(), taskDTO.getValue(), taskDTO.isDone(),
+        taskDTO.getCreationDateAndTime(), taskDTO.getCreationTimestamp());
+  }
 }

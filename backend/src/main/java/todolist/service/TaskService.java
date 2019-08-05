@@ -2,7 +2,9 @@ package todolist.service;
 
 import todolist.web.dto.TaskDTO;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * This interface defines the functionality exposed on the todolist.
@@ -21,5 +23,5 @@ public interface TaskService {
    * @param task an instance of {@link TaskDTO} with the task
    *             details.
    */
-  //void createTask(final TaskDTO task);
+  void editTask(final TaskDTO task);
 }

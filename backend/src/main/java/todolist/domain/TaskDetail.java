@@ -14,11 +14,15 @@ public class TaskDetail {
 
   private String value;
   private Boolean done;
+  private String creationDateAndTime;
+  private String creationTimestamp;
 
-  public TaskDetail(String id, String value, Boolean done) {
+  public TaskDetail(String id, String value, Boolean done, String creationDateAndTime, String creationTimestamp) {
     this.id = id;
     this.value = value;
     this.done = done;
+    this.creationDateAndTime = creationDateAndTime;
+    this.creationTimestamp = creationTimestamp;
   }
 
   public String getId() {
@@ -45,10 +49,19 @@ public class TaskDetail {
     this.done = done;
   }
 
-  public String toString() {
-    return String.format(
-        "Customer[id=%s, value='%s', done='%s']",
-        id, value, done
-    );
+  public String getCreationDateAndTime() {
+    return creationDateAndTime;
+  }
+
+  public void setCreationDateAndTime(String creationDateAndTime) {
+    this.creationDateAndTime = creationDateAndTime;
+  }
+
+  public String getCreationTimestamp() {
+    return creationTimestamp;
+  }
+
+  public void setCreationTimestamp(String creationTimestamp) {
+    this.creationTimestamp = creationTimestamp;
   }
 }
