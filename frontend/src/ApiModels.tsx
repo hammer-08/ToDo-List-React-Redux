@@ -1,5 +1,5 @@
 export interface TaskModel {
-    id: string;
+    taskId: string;
     creationDateAndTime: string;
     creationTimestamp: string;
     value: string;

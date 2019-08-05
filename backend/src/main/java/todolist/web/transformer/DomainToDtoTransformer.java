@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DomainToDtoTransformer {
   public static TaskDTO transform(final TaskDetail taskDetail) {
-    return new TaskDTO (taskDetail.getId(), taskDetail.getValue(), taskDetail.isDone(),
+    return new TaskDTO (taskDetail.getTaskId(), taskDetail.getValue(), taskDetail.isDone(),
         taskDetail.getCreationDateAndTime(), taskDetail.getCreationTimestamp());
   }
 

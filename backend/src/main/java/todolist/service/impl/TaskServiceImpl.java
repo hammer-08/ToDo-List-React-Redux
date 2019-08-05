@@ -6,14 +6,10 @@ import todolist.domain.TaskDetail;
 import todolist.service.TaskService;
 import todolist.web.dto.TaskDTO;
 import org.springframework.stereotype.Service;
-import org.apache.commons.lang3.StringUtils;
 import todolist.web.transformer.DTOToDomainTransformer;
 import todolist.web.transformer.DomainToDtoTransformer;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * This service class implements the {@link TaskService} to
@@ -31,11 +27,6 @@ public class TaskServiceImpl implements TaskService {
 
   public void editTask(TaskDTO task) {
     TaskDetail taskDtoToPersist = DTOToDomainTransformer.transform(task);
-    TaskDetail oldTask = taskRepository.findByValue(taskDtoToPersist.getValue());
-    if (oldTask != null) {
-      taskRepository.save(taskDtoToPersist);
-    } else {
-      taskRepository.insert(taskDtoToPersist);
-    }
+    taskRepository.save(taskDtoToPersist);
   }
 }

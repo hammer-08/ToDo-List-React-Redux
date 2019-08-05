@@ -12,8 +12,8 @@ import javax.validation.constraints.NotNull;
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class TaskDTO {
   @NotNull
-  @JsonProperty("id")
-  private String id;
+  @JsonProperty("taskId")
+  private String taskId;
 
   @JsonProperty("creationDateAndTime")
   private String creationDateAndTime;
@@ -28,23 +28,23 @@ public class TaskDTO {
   @JsonProperty("done")
   private Boolean done;
 
-  public TaskDTO(@JsonProperty("id") String id, @JsonProperty("value") String value,
+  public TaskDTO(@JsonProperty("taskId") String taskId, @JsonProperty("value") String value,
                  @JsonProperty("done") Boolean done, @JsonProperty("creationDateAndTime")
                      String creationDateAndTime, @JsonProperty("creationTimestamp")
                      String creationTimestamp) {
-    this.id = id;
+    this.taskId = taskId;
     this.value = value;
     this.done = done;
     this.creationDateAndTime = creationDateAndTime;
     this.creationTimestamp = creationTimestamp;
   }
 
-  public String getId() {
-    return id;
+  public String getTaskId() {
+    return taskId;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setTaskId(String taskId) {
+    this.taskId = taskId;
   }
 
   public String getValue() {

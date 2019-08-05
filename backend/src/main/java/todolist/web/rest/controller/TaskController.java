@@ -53,11 +53,11 @@ public class TaskController {
   @PostMapping("api/editTask")
   public Callable<ResponseEntity<String>> editTask(@RequestBody TaskDTO request) {
     return () -> {
-      logger.debug("Edition requested for TaskId [{}]", request.getId());
+      logger.debug("Edition requested for TaskId [{}]", request.getTaskId());
 
       taskService.editTask(request);
 
-      return ResponseEntity.ok(request.getId());
+      return ResponseEntity.ok(request.getTaskId());
     };
   }
 }

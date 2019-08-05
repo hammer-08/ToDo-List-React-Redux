@@ -19,7 +19,7 @@ public class DTOToDomainTransformer {
    * of the task.
    */
   public static TaskDetail transform(final TaskDTO taskDTO) {
-    return new TaskDetail(taskDTO.getId(), taskDTO.getValue(), taskDTO.isDone(),
+    return new TaskDetail(taskDTO.getTaskId(), taskDTO.getValue(), taskDTO.isDone(),
         taskDTO.getCreationDateAndTime(), taskDTO.getCreationTimestamp());
   }
 }

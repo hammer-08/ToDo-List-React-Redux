@@ -10,27 +10,27 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class TaskDetail {
 
   @Id
-  private String id;
+  private String taskId;
 
   private String value;
   private Boolean done;
   private String creationDateAndTime;
   private String creationTimestamp;
 
-  public TaskDetail(String id, String value, Boolean done, String creationDateAndTime, String creationTimestamp) {
-    this.id = id;
+  public TaskDetail(String taskId, String value, Boolean done, String creationDateAndTime, String creationTimestamp) {
+    this.taskId = taskId;
     this.value = value;
     this.done = done;
     this.creationDateAndTime = creationDateAndTime;
     this.creationTimestamp = creationTimestamp;
   }
 
-  public String getId() {
-    return id;
+  public String getTaskId() {
+    return taskId;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setTaskId(String taskId) {
+    this.taskId = taskId;
   }
 
   public String getValue() {

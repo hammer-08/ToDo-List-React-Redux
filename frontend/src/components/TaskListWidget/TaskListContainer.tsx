@@ -32,7 +32,7 @@ class TaskListContainer extends React.Component<Props> {
 
     handleSubmitCreation = (text: string) => {
         const task: TaskModel = {
-            id: uuid(),
+            taskId: uuid(),
             done: false,
             creationDateAndTime: moment().toString(),
             creationTimestamp: moment().utc.toString(),
@@ -43,8 +43,8 @@ class TaskListContainer extends React.Component<Props> {
         setInterval(() => this.setTasks(), 1000);
     }
 
-    handleSubmitEdition = (id: string, text: string) => {
-        const oldTask = this.props.taskList.find(e => e.id === id);
+    handleSubmitEdition = (taskId: string, text: string) => {
+        const oldTask = this.props.taskList.find(e => e.taskId === taskId);
 
         if (!oldTask) {
             return;
@@ -59,8 +59,8 @@ class TaskListContainer extends React.Component<Props> {
         setInterval(() => this.setTasks(), 1000);
     }
 
-    handleDone = (id: string) => {
-        const oldTask = this.props.taskList.find(e => e.id === id);
+    handleDone = (taskId: string) => {
+        const oldTask = this.props.taskList.find(e => e.taskId === taskId);
 
         if (!oldTask) {
             return;
