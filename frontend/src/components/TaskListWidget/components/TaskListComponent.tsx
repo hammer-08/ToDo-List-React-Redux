@@ -7,9 +7,10 @@ import { TaskModel } from '../../../ApiModels';
 import './TaskListComponent.css';
 
 interface OwnProps {
-    handlerSubmitEditClick(taskId: string, desc: string): void;
-    handlerDoneClick(taskId: string): void;
-    handlerSubmitCreationClick(value: string): void;
+    handleSubmitEditClick(task: TaskModel, desc: string): void;
+    handleDoneClick(task: TaskModel): void;
+    handleSubmitCreationClick(value: string): void;
+    handleDeleteClick(taskId: string): void;
 }
 
 interface State {
@@ -45,37 +46,30 @@ class TaskListComponent extends React.Component<Props, State> {
 
     handleSubmitCreation = (value: string) => {
         this.hideNewRow();
-        this.props.handlerSubmitCreationClick(value);
+        this.props.handleSubmitCreationClick(value);
     }
 
     render() {
         return (
             <div className={'task-list'}>
-                <button
-                    className={'btn add-new-task'}
-                    onClick={this.showNewRow}
-                >
-                    <span className={'glyphicon glyphicon-plus'}></span>
-                    Add new task
-                </button>
+                <span className={'button newTaskButton glyphicon glyphicon-plus'} onClick={this.showNewRow}> Add new task</span>
                 <div className={'task-list list'}>
                     {this.state.showNewRow &&
                         <TaskListNewRow
-                            handlerSubmitCreationClick={this.handleSubmitCreation}
-                            handlerCancelCreationClick={this.handleCancelCreation}
+                            handleSubmitCreationClick={this.handleSubmitCreation}
+                            handleCancelCreationClick={this.handleCancelCreation}
                         />
                     }
                     <span className={'task-list list element'}>
                         {
-                            this.props.taskList.map((e, index) => {
+                            this.props.taskList.map((task, index) => {
                                 return (
                                     <TaskListRow
                                         key={index}
-                                        desc={e.value}
-                                        done={e.done}
-                                        taskId={e.taskId}
-                                        handlerSubmitEditClick={this.props.handlerSubmitEditClick}
-                                        handlerDoneClick={this.props.handlerDoneClick}
+                                        task={task}
+                                        handleSubmitEditClick={this.props.handleSubmitEditClick}
+                                        handleDoneClick={this.props.handleDoneClick}
+                                        handleDeleteClick={this.props.handleDeleteClick}
                                     />
                                 );
                             })

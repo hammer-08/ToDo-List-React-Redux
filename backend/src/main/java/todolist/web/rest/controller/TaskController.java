@@ -11,7 +11,6 @@ import todolist.service.TaskService;
 import todolist.web.dto.TaskDTO;
 
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.Callable;
 
 /**
@@ -37,10 +36,12 @@ public class TaskController {
    * adding the task was successful.
    */
 
-  @RequestMapping("/api/findAllTasks")
-  @ResponseBody
-  public List<TaskDTO> findAllTasks() {
-    return taskService.findAllTasks();
+  @RequestMapping(value = "/api/findAllTasks", method = RequestMethod.GET)
+  public Callable<ResponseEntity<List<TaskDTO>>> findAllTasks() {
+    return () -> {
+      List<TaskDTO> tasks = taskService.findAllTasks();
+      return ResponseEntity.ok(tasks);
+    };
   }
 
   /**

@@ -8,6 +8,7 @@ import { taskListReducer, taskListState } from './components/TaskListWidget/Task
 import register from './serviceWorker';
 import TaskListContainer from './components/TaskListWidget/TaskListContainer';
 import { Provider } from 'react-redux'
+import 'bootstrap/dist/css/bootstrap.css';
 
 const reducer = combineReducers<StateType>({
     taskList: taskListReducer

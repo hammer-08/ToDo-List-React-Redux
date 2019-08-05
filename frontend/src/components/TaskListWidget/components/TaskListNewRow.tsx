@@ -5,8 +5,8 @@ interface State {
 }
 
 interface OwnProps {
-    handlerSubmitCreationClick(value: string): void;
-    handlerCancelCreationClick(): void;
+    handleSubmitCreationClick(value: string): void;
+    handleCancelCreationClick(): void;
 }
 
 type Props = OwnProps;
@@ -19,8 +19,12 @@ export default class TaskListNewRow extends React.Component<Props, State> {
         };
     }
 
-    handlerDescChange = (e: string) => {
-        this.setState({ desc: e })
+    handlerDescChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({ desc: e.target.value })
+    }
+
+    handleSubmitCreationClick = () => {
+        this.props.handleSubmitCreationClick(this.state.desc);
     }
 
     render() {
@@ -28,15 +32,15 @@ export default class TaskListNewRow extends React.Component<Props, State> {
             <div className={'edit-row'}>
                 <input
                     value={this.state.desc}
-                    onChange={(e) => this.handlerDescChange(e.target.value)}
+                    onChange={this.handlerDescChange}
                 />
                 <button
-                    onClick={() => this.props.handlerSubmitCreationClick(this.state.desc)}
+                    onClick={this.handleSubmitCreationClick}
                 >
                     Create
             </button>
                 <button
-                    onClick={this.props.handlerCancelCreationClick}
+                    onClick={this.props.handleCancelCreationClick}
                 >
                     Cancel
             </button>

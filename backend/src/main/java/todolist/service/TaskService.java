@@ -2,9 +2,7 @@ package todolist.service;
 
 import todolist.web.dto.TaskDTO;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * This interface defines the functionality exposed on the todolist.

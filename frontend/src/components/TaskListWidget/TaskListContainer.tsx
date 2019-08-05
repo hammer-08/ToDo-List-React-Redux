@@ -8,7 +8,8 @@ import {
     TaskListActions,
     setTasks,
     editTask,
-    findAllTasks
+    findAllTasks,
+    deleteTask
 } from './TaskListLogic';
 import uuid from 'uuid';
 import moment from 'moment';
@@ -25,12 +26,12 @@ type Props = StateToProps & DispatchProps;
 
 class TaskListContainer extends React.Component<Props> {
 
-    async setTasks () {
+    setTasks = async () => {
         const tasks = await findAllTasks();
         this.props.setTasks(tasks);
     }
 
-    handleSubmitCreation = (text: string) => {
+    handleSubmitCreation = async(text: string) => {
         const task: TaskModel = {
             taskId: uuid(),
             done: false,
@@ -38,54 +39,52 @@ class TaskListContainer extends React.Component<Props> {
             creationTimestamp: moment().utc.toString(),
             value: text
         }
-        editTask(task);
-
-        setInterval(() => this.setTasks(), 1000);
+        await editTask(task);
+        this.setTasks();
     }
 
-    handleSubmitEdition = (taskId: string, text: string) => {
-        const oldTask = this.props.taskList.find(e => e.taskId === taskId);
-
-        if (!oldTask) {
+    handleSubmitEdition = async(task: TaskModel, text: string) => {
+        if (!task) {
             return;
         }
 
         const newTask: TaskModel = {
-            ...oldTask,
+            ...task,
             value: text
         }
-        editTask(newTask);
-
-        setInterval(() => this.setTasks(), 1000);
+        await editTask(newTask);
+        this.setTasks();
     }
 
-    handleDone = (taskId: string) => {
-        const oldTask = this.props.taskList.find(e => e.taskId === taskId);
-
-        if (!oldTask) {
+    handleDone = async(task: TaskModel) => {
+        if (!task) {
             return;
         }
 
         const doneTask: TaskModel = {
-            ...oldTask,
+            ...task,
             done: true
         }
-        editTask(doneTask);
-
-        setInterval(() => this.setTasks(), 1000);
+        await editTask(doneTask);
+        this.setTasks();
     }
 
     async componentWillMount() {
         this.setTasks();
     }
 
+    handleDeleteTask = (taskId: string) => {
+        deleteTask(taskId);
+    }
+
     render() {
         return (
             <div className={'task-list-component'}>
                 <TaskListComponent
-                    handlerSubmitCreationClick={this.handleSubmitCreation}
-                    handlerSubmitEditClick={this.handleSubmitEdition}
-                    handlerDoneClick={this.handleDone}
+                    handleSubmitCreationClick={this.handleSubmitCreation}
+                    handleSubmitEditClick={this.handleSubmitEdition}
+                    handleDoneClick={this.handleDone}
+                    handleDeleteClick={this.handleDeleteTask}
                 />
             </div>
         );

@@ -5,8 +5,6 @@ import org.springframework.stereotype.Repository;
 import todolist.domain.TaskDetail;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.Optional;
-
 @Repository
 public interface TaskRepository extends MongoRepository<TaskDetail, String> {
 

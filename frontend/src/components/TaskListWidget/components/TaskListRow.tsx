@@ -1,13 +1,14 @@
 import * as React from 'react';
 import './TaskListComponent.css';
+import { TaskModel } from '../../../ApiModels';
+import './TaskListComponent';
 
 interface OwnProps {
     key: number;
-    desc: string;
-    done: boolean;
-    taskId: string;
-    handlerSubmitEditClick(taskId: string, desc: string): void;
-    handlerDoneClick(taskId: string): void;
+    task: TaskModel;
+    handleSubmitEditClick(task: TaskModel, desc: string): void;
+    handleDoneClick(task: TaskModel): void;
+    handleDeleteClick(taskId: string): void;
 }
 
 interface State {
@@ -21,22 +22,38 @@ export default class TaskListRow extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            desc: this.props.desc,
+            desc: this.props.task.value,
             editTask: false
         }
     }
 
-    handlerDescChange = (e: string) => {
-        this.setState({ desc: e })
+    handleDescChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({ desc: e.target.value })
     }
 
-    handlerSubmitEditClick = (taskId: string, text: string) => {
+    handleSubmitEditClick = () => {
         this.setState({ editTask: false });
-        this.props.handlerSubmitEditClick(taskId, text);
+        this.props.handleSubmitEditClick(this.props.task, this.state.desc);
     }
 
-    handlerCancelEditClick = () => {
+    handleCancelEditClick = () => {
         this.setState({ editTask: false });
+    }
+
+    handleDoneClick = () => {
+        this.props.handleDoneClick(this.props.task);
+    }
+
+    handleEditClick = () => {
+        this.setState({ editTask: true })
+    }
+
+    handleDeleteClick = () => {
+        const confirmed = window.confirm('Are you sure you want to delete this task?');
+
+        if (confirmed) {
+            this.props.handleDeleteClick(this.props.task.taskId);
+        }
     }
 
     render() {
@@ -46,33 +63,21 @@ export default class TaskListRow extends React.Component<Props, State> {
                     ? <div className={'edit-row'}>
                         <input
                             value={this.state.desc}
-                            onChange={(e) => this.handlerDescChange(e.target.value)}
+                            onChange={this.handleDescChange}
                         />
-                        <button
-                            onClick={() => this.handlerSubmitEditClick(this.props.taskId, this.state.desc)}
-                        >
-                            Submit
-                    </button>
-                        <button
-                            onClick={this.handlerCancelEditClick}
-                        >
+                        <span className="button glyphicon glyphicon-floppy-save" onClick={this.handleSubmitEditClick} />
+                        <span className="button glyphicon glyphicon-remove" onClick={this.handleCancelEditClick}>
                             Cancel
-                    </button>
+                        </span>
                     </div>
-                    : <div>
-                        <span>{this.props.desc}</span>
-                        {this.props.done && <span> - OK </span>}
-                        {!this.props.done &&
+                    : <div className={'show-row'}>
+                        <span>{this.props.task.value}</span>
+                        {this.props.task.done && <span className="okaySign glyphicon glyphicon-ok" style={{marginLeft: '10px'}}/>}
+                        {!this.props.task.done &&
                             <span>
-                                <button
-                                    onClick={() => this.setState({ editTask: true, desc: this.props.desc })}>
-                                    Edit
-                    </button>
-                                <button
-                                    onClick={() => this.props.handlerDoneClick(this.props.taskId)}
-                                >
-                                    Done
-                    </button>
+                                <span className="button glyphicon glyphicon-pencil" onClick={this.handleEditClick} />
+                                <span className="button glyphicon glyphicon-ok-sign" onClick={this.handleDoneClick} />
+                                <span className="button glyphicon glyphicon-trash" onClick={this.handleDeleteClick} />
                             </span>}
                     </div>}
             </div>
