@@ -1,4 +1,4 @@
-import { TaskListState } from "./components/TaskListWidget/TaskListLogic";
+import { TaskListState } from "./components/TaskListWidget/components/TaskListPage/TaskListLogic";
 
 export interface Act<T extends string, V> {
     type: T;

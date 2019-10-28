@@ -2,7 +2,7 @@ export interface TaskModel {
     taskId: string;
     creationDateAndTime: string;
     creationTimestamp: string;
-    value: string;
+    description: string;
     done: boolean;
 }
 

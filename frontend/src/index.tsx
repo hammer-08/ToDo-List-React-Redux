@@ -4,9 +4,9 @@ import './index.css';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { combineReducers, createStore } from 'redux';
 import { StateType } from './types';
-import { taskListReducer, taskListState } from './components/TaskListWidget/TaskListLogic';
+import { taskListReducer, taskListInitialState } from './components/TaskListWidget/components/TaskListPage/TaskListLogic';
 import register from './serviceWorker';
-import TaskListContainer from './components/TaskListWidget/TaskListContainer';
+import TaskListContainer from './components/TaskListWidget/components/TaskListPage/TaskListContainer';
 import { Provider } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -15,7 +15,7 @@ const reducer = combineReducers<StateType>({
 });
 
 export const initialState: StateType = {
-    taskList: taskListState
+    taskList: taskListInitialState
 }
 
 const store = createStore(

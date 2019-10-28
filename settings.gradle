@@ -1,1 +1,4 @@
-rootProject.name = 'ToDoListModule'
+rootProject.name = 'ToDo-List'
+
+include "frontend"
+include "backend"
