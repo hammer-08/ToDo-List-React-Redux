@@ -16,12 +16,8 @@ import com.mongodb.ServerAddress;
 @Configuration
 public class MongoConfiguration extends AbstractMongoConfiguration {
 
-  private MongoProperties properties;
-
   @Autowired
-  public MongoConfiguration(MongoProperties properties) {
-    this.properties = properties;
-  }
+  private MongoProperties properties;
 
   @Override
   public MongoClient mongoClient() {

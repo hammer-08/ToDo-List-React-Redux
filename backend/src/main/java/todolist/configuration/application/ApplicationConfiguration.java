@@ -3,18 +3,18 @@ package todolist.configuration.application;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.AsyncTaskExecutor;
-import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @Configuration
-@EnableScheduling
+@EnableAsync
 public class ApplicationConfiguration {
 
   @Bean
   public AsyncTaskExecutor taskExecutor() {
     ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
 
-    taskExecutor.setCorePoolSize(1);
+    taskExecutor.setCorePoolSize(10);
     taskExecutor.setMaxPoolSize(100);
     taskExecutor.setQueueCapacity(1000);
     taskExecutor.setWaitForTasksToCompleteOnShutdown(true);

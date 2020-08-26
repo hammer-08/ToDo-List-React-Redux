@@ -12,10 +12,6 @@ public class MongoProperties {
   private String username;
   private String password;
 
-  public MongoProperties() {
-  }
-
-
   public int getPort() {
     return port;
   }

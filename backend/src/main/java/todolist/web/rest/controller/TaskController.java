@@ -3,12 +3,10 @@ package todolist.web.rest.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import todolist.service.TaskService;
-import todolist.web.dto.TaskDTO;
+import todolist.core.usecases.TaskUseCases;
+import todolist.web.dto.TaskDto;
 
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -16,29 +14,26 @@ import java.util.concurrent.Callable;
 /**
  * This class exposes the REST API for the system.
  */
-@RepositoryRestController
-@Controller
+@RestController
+@RequestMapping(value = "/api")
 public class TaskController {
 
-  private final TaskService taskService;
-  private static Logger logger = LoggerFactory.getLogger(TaskController.class);
-
   @Autowired
-  public TaskController(TaskService taskService) {
-    this.taskService = taskService;
-  }
+  private TaskUseCases taskUseCases;
+
+  private static Logger logger = LoggerFactory.getLogger(TaskController.class);
 
   /**
    * This method will be used to add tasks to the system.
    *
-   * @return a List of {@link TaskDTO} which will notify whether
+   * @return a List of {@link TaskDto} which will notify whether
    * adding the task was successful.
    */
 
-  @RequestMapping(value = "/api/findAllTasks", method = RequestMethod.GET)
-  public Callable<ResponseEntity<List<TaskDTO>>> findAllTasks() {
+  @GetMapping(value = "/findAllTasks")
+  public Callable<ResponseEntity<List<TaskDto>>> findAllTasks() {
     return () -> {
-      List<TaskDTO> tasks = taskService.findAllTasks();
+      List<TaskDto> tasks = taskUseCases.findAllTasks();
       return ResponseEntity.ok(tasks);
     };
   }
@@ -50,24 +45,24 @@ public class TaskController {
    * @return an instance of {@link ResponseEntity} which will notify whether
    * adding/editing the task was successful.
    */
-  @PostMapping("api/editTask")
-  public Callable<ResponseEntity<String>> editTask(@RequestBody TaskDTO request) {
+  @PostMapping("/editTask")
+  public Callable<ResponseEntity<String>> editTask(@RequestBody TaskDto request) {
     return () -> {
-      logger.debug("Edition requested for TaskId [{}]", request.getTaskId());
+      logger.debug("Edition requested for TaskId [{}]", request.getId());
 
-      taskService.editTask(request);
+      taskUseCases.editTask(request);
 
-      return ResponseEntity.ok(request.getTaskId());
+      return ResponseEntity.ok(request.getId());
     };
   }
 
   /**
    * This method will be used to delete tasks;
    */
-  @PostMapping("api/deleteTask")
+  @DeleteMapping("/deleteTask")
   public Callable<ResponseEntity<String>> deleteTask(@RequestBody String taskId) {
     return () -> {
-      taskService.deleteTask(taskId);
+      taskUseCases.deleteTask(taskId);
 
       return ResponseEntity.ok(taskId);
     };
