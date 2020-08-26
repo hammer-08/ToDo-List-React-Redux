@@ -31,10 +31,8 @@ const TaskListRow: React.FunctionComponent<Props> = (props: Props) => {
     const handleDoneClick = async () => {
         const task = _.cloneDeep(props.task)
 
-        task.isDone = true
-        editTask(task)
-
-        const value: TaskModel[] = await findAllTasks()
+        task.isDone = !task.isDone
+        const value: TaskModel[] = await editTask(task)
         dispatch(setTasks(value))
     }
 
@@ -42,9 +40,7 @@ const TaskListRow: React.FunctionComponent<Props> = (props: Props) => {
         const confirmed = window.confirm('Are you sure you want to delete this task?')
 
         if (confirmed) {
-            deleteTaskById(props.task.id)
-
-            const value: TaskModel[] = await findAllTasks()
+            const value: TaskModel[] = await deleteTaskById(props.task.id)
             dispatch(setTasks(value))
         }
     }

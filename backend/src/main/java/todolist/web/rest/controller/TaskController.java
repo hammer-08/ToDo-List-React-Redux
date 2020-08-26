@@ -15,7 +15,7 @@ import java.util.concurrent.Callable;
  * This class exposes the REST API for the system.
  */
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api/task")
 public class TaskController {
 
   @Autowired
@@ -45,26 +45,26 @@ public class TaskController {
    * @return an instance of {@link ResponseEntity} which will notify whether
    * adding/editing the task was successful.
    */
-  @PostMapping("/editTask")
-  public Callable<ResponseEntity<String>> editTask(@RequestBody TaskDto request) {
+  @PostMapping
+  public Callable<ResponseEntity<List<TaskDto>>> editTask(@RequestBody TaskDto request) {
     return () -> {
       logger.debug("Edition requested for TaskId [{}]", request.getId());
 
       taskUseCases.editTask(request);
 
-      return ResponseEntity.ok(request.getId());
+      return ResponseEntity.ok(taskUseCases.findAllTasks());
     };
   }
 
   /**
    * This method will be used to delete tasks;
    */
-  @DeleteMapping("/deleteTask")
-  public Callable<ResponseEntity<String>> deleteTask(@RequestBody String taskId) {
+  @DeleteMapping("/{id}")
+  public Callable<ResponseEntity<List<TaskDto>>> deleteTask(@PathVariable String id) {
     return () -> {
-      taskUseCases.deleteTask(taskId);
+      taskUseCases.deleteTask(id);
 
-      return ResponseEntity.ok(taskId);
+      return ResponseEntity.ok(taskUseCases.findAllTasks());
     };
   }
 }

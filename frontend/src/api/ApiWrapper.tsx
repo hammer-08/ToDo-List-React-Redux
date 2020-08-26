@@ -12,9 +12,15 @@ export function apiPost(input: RequestInfo, data: {}) {
     })
 }
 
+export function apiDelete(input: RequestInfo) {
+    return apiFetch(input, {
+      method: 'DELETE'
+    });
+  }
+
 export function apiFetch(input: RequestInfo, init?: RequestInit | undefined): Promise<Response> {
     const defaultHeaders: _.Dictionary<string> = {
-        'Content-type': 'application/json charset=UTF-8',
+        'Content-type': 'application/json',
         'Accept': 'application/json'
     }
 

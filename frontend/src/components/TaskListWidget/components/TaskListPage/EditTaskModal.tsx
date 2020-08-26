@@ -10,7 +10,7 @@ import {
 import { editTask, findAllTasks } from '../../../../api/Rest'
 import _ from 'lodash'
 
-const EditTaskModal: React.FunctionComponent<{}> = (props: {}) => {
+const EditTaskModal: React.FunctionComponent<{}> = () => {
     const dispatch = useDispatch()
     const editingTask = useSelector((state: TaskListState) => _.cloneDeep(state.taskOnEdition))
 
@@ -24,10 +24,8 @@ const EditTaskModal: React.FunctionComponent<{}> = (props: {}) => {
     }
 
     const onSubmitEditionClick = async () => {
-        editTask(editingTask)
+        const value: TaskModel[] = await editTask(editingTask)
         dispatch(clearEditingTask())
-
-        const value: TaskModel[] = await findAllTasks()
         dispatch(setTasks(value))
     }
 

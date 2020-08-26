@@ -1,17 +1,17 @@
 import { TaskModel } from "./ApiModels"
-import { apiFetch, apiPost } from "./ApiWrapper"
+import { apiFetch, apiPost, apiDelete } from "./ApiWrapper"
 
 export async function findAllTasks(): Promise<TaskModel[]> {
-    const response = await apiFetch('api/findAllTasks')
+    const response = await apiFetch('api/task/findAllTasks')
     return await response.json()
 }
 
-export async function editTask(request: TaskModel): Promise<string> {
-    const response = await apiPost('api/editTask', request)
+export async function editTask(request: TaskModel): Promise<TaskModel[]> {
+    const response = await apiPost('api/task', request)
     return await response.json()
 }
 
-export async function deleteTaskById(taskId: string): Promise<string> {
-    const response = await apiPost('api/deleteTask', taskId)
+export async function deleteTaskById(taskId: string): Promise<TaskModel[]> {
+    const response = await apiDelete(`api/task/${taskId}`)
     return await response.json()
 }
