@@ -1,5 +1,5 @@
 interface AnyWindow extends Window {
-    [extraProps: string]: any;
+    [extraProps: string]: any
   }
   
-  export const anyWindow = window as AnyWindow;
+  export const anyWindow = window as AnyWindow

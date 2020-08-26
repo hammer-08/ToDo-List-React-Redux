@@ -1,34 +1,16 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import './index.css';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { combineReducers, createStore } from 'redux';
-import { StateType } from './types';
-import { taskListReducer, taskListInitialState } from './components/TaskListWidget/components/TaskListPage/TaskListLogic';
-import register from './serviceWorker';
-import TaskListContainer from './components/TaskListWidget/components/TaskListPage/TaskListContainer';
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { createStore } from 'redux'
+import { taskListReducer } from './components/TaskListWidget/components/TaskListPage/TaskListLogic'
 import { Provider } from 'react-redux'
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css'
+import TaskListComponent from './components/TaskListWidget/components/TaskListPage/TaskListComponent'
 
-const reducer = combineReducers<StateType>({
-    taskList: taskListReducer
-});
-
-export const initialState: StateType = {
-    taskList: taskListInitialState
-}
-
-const store = createStore(
-    reducer,
-    composeWithDevTools()
-);
+const store = createStore(taskListReducer, composeWithDevTools())
 
 ReactDOM.render(
     <Provider store={store}>
-        <div style={{ top: '10%', left: '45%', position: 'absolute' }}>
-            <TaskListContainer />
-        </div>
+        <TaskListComponent />
     </Provider>
-    , document.getElementById('root'));
-
-register();
+    , document.getElementById('root'))
