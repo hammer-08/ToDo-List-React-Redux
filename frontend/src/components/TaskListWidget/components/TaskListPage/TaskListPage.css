@@ -3,7 +3,7 @@
 }
 
 .button {
-    border-radius: 3px 4px 4px 3px;
+    border-radius: 4px;
     border: none;
     background-color: slateblue;
     color: #FFFFFF;
@@ -37,7 +37,6 @@
     font-size: 14px;
 }
 
-
 .icon {
     margin-left: 5px;
     border-radius: 24px;
@@ -57,4 +56,26 @@
 
 .task-row .okayUndone {
     background-color: #E64A19;
+}
+
+.edit-task-modal .modal-dialog {
+    max-width: 400px;
+}
+
+.edit-task-modal .modal-header {
+    font-size: 18px;
+}
+
+.edit-task-modal .modal-body {
+    display: flex;
+    align-items: center;
+}
+
+.edit-task-modal .modal-body-desc-input {
+    margin-left: 10px;
+    max-width: 500px;
+}
+
+.edit-task-modal .cancel {
+    margin-left: 10px;
 }
