@@ -9,7 +9,7 @@ import {
     setTasks
 } from "./TaskListLogic"
 import * as _ from 'lodash'
-import { deleteTaskById, editTask, findAllTasks } from '../../../../api/Rest'
+import { deleteTaskById, editTask } from '../../../../api/Rest'
 
 interface Props {
     task: TaskModel
